@@ -63,7 +63,6 @@ function JobListings() {
     }
   };
 
-  // Combine static job posts with fetched jobs
   const allJobs = [...jobPosts, ...jobs];
 
   return (

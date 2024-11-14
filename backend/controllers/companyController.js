@@ -37,7 +37,7 @@ exports.deleteCompany = async (req, res) => {
     res.status(500).json({ message: 'Error deleting company', error: error.message });
   }
 };
-// Fetch all companies
+
 exports.getAllCompanies = async (req, res) => {
   try {
     const companies = await Company.find();
@@ -47,7 +47,7 @@ exports.getAllCompanies = async (req, res) => {
   }
 };
 
-// Fetch a specific company by ID (optional)
+
 exports.getCompanyById = async (req, res) => {
   try {
     const company = await Company.findById(req.params.id);

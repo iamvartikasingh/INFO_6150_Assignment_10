@@ -51,11 +51,11 @@ function Login() {
           backgroundImage: 'url("https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15877.jpg?t=st=1731566395~exp=1731569995~hmac=a32d895270a9f29ca40bfccf9992bc3f44bfb6f3ec3de0ec83b212833b5878a6&w=2000")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.7, // Adjusts the opacity of the background
+          opacity: 0.7, 
           zIndex: 0,
         }}
       />
-      {/* Login Form */}
+     
       <Container maxWidth="xs" sx={{ position: 'relative', zIndex: 1 }}>
         <Paper elevation={3} sx={{ padding: 3 }}>
           <Box display="flex" justifyContent="center" mb={2}>

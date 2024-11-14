@@ -9,7 +9,7 @@ function CompanyShowcase() {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        // Adjust the URL based on your backend server configuration
+        
         const response = await axios.get('http://localhost:3001/api/companies');
         setCompanies(response.data);
       } catch (error) {

@@ -3,24 +3,24 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2', // A nice shade of blue
-      contrastText: '#ffffff', // White text for contrast
+      main: '#1976d2', 
+      contrastText: '#ffffff', 
     },
     secondary: {
-      main: '#009688', // Teal
-      contrastText: '#ffffff', // White text for contrast
+      main: '#009688', 
+      contrastText: '#ffffff', 
     },
     background: {
-      default: '#f5f5f5', // Light gray background
-      paper: '#ffffff', // White background for cards and paper
+      default: '#f5f5f5', 
+      paper: '#ffffff', 
     },
     text: {
-      primary: '#333333', // Darker text color for better readability
-      secondary: '#555555', // Slightly lighter gray for secondary text
+      primary: '#333333', 
+      secondary: '#555555', 
     },
   },
   typography: {
-    fontFamily: 'Roboto, Arial, sans-serif', // Default font family
+    fontFamily: 'Roboto, Arial, sans-serif', 
     h1: {
       fontSize: '2.5rem',
       fontWeight: 600,
@@ -50,21 +50,21 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '8px', // Rounded corners for buttons
-          padding: '10px 20px', // Padding for buttons
+          borderRadius: '8px', 
+          padding: '10px 20px', 
         },
         containedPrimary: {
           backgroundColor: '#1976d2',
           color: '#ffffff',
           '&:hover': {
-            backgroundColor: '#1565c0', // Slightly darker shade on hover
+            backgroundColor: '#1565c0',
           },
         },
         containedSecondary: {
           backgroundColor: '#009688',
           color: '#ffffff',
           '&:hover': {
-            backgroundColor: '#00796b', // Slightly darker teal on hover
+            backgroundColor: '#00796b', 
           },
         },
       },
