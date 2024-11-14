@@ -14,8 +14,9 @@ app.use(express.json());
 
 // Use job routes
 app.use('/api/jobs', jobRoutes);
-// Middleware
-
+// Middlewareusers
+app.use('/api/users', userRoutes);
+app.use('/api', authRoutes);
 app.use(bodyParser.json());
 
 // Add this at the top of your server.js file
