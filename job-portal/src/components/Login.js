@@ -104,28 +104,11 @@ function Login() {
           </form>
         </Paper>
       </Container>
-      <Footer />
+     
     </Box>
   );
 }
 
-function Footer() {
-    return (
-      <Box
-        sx={{
-          width: '100%',
-          textAlign: 'center',
-          padding: 2,
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-          color: 'white',
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-        }}
-      >
-        <Typography variant="body2">© 2024 JobHunt. All rights reserved.</Typography>
-      </Box>
-    );
-  }
+
 
 export default Login;

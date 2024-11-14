@@ -11,14 +11,20 @@ import JobListings from './components/JobListings';
 import Contact from './components/Contact';
 import CompanyShowcase from './components/CompanyShowcase';
 import ProtectedRoute from './components/ProtectedRoute';
+import Footer from './components/Footer';
 
 function AppContent() {
   const location = useLocation();
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
+    <div  style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+        }} className="App">
       {location.pathname !== '/' && <NavBar />}
+      <main style={{ flex: 1 }}>
       <Routes>
       <Route path="/protected" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="/" element={<Login />} />
@@ -28,6 +34,8 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/company-showcase" element={<CompanyShowcase />} />
       </Routes>
+      </main>
+      <Footer />
     </div>
 
     </ThemeProvider>
@@ -38,6 +46,7 @@ function App() {
   return (
     <Router>
       <AppContent />
+    
     </Router>
   );
 }
