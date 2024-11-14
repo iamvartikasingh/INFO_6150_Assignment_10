@@ -13,8 +13,8 @@ function NavBar() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Clear the token
-    navigate('/'); // Redirect to login page
+    localStorage.removeItem('token'); 
+    navigate('/'); 
   };
 
   const drawer = (
@@ -80,7 +80,7 @@ function NavBar() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
+          keepMounted: true, 
         }}
       >
         {drawer}

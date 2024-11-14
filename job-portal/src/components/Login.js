@@ -36,11 +36,11 @@ function Login() {
         justifyContent: 'center',
         alignItems: 'center',
         fontFamily: 'Roboto, sans-serif',
-        position: 'relative', // Added for layering the overlay
+        position: 'relative', 
         overflow: 'hidden',
       }}
     >
-      {/* Background Image with reduced opacity */}
+      
       <Box
         sx={{
           position: 'absolute',

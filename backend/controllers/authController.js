@@ -6,15 +6,15 @@ exports.login = async (req, res) => {
 
   try {
     const user = await authService.authenticate(username, password);
-    if (user && user.username) { // Ensure user exists and has a username
-      // Generate JWT token
+    if (user && user.username) { 
+     
       const token = jwt.sign(
-        { username: user.username, id: user._id }, // Payload data
+        { username: user.username, id: user._id }, 
         'secret', 
-        { expiresIn: '1h' } // Token expiry (optional)
+        { expiresIn: '1h' } 
       );
     
-      res.status(200).json({ message: 'Login successful', token, user }); // Include the user object in the response
+      res.status(200).json({ message: 'Login successful', token, user }); 
     }  else {
       res.status(401).json({ message: 'Invalid username or password' });
     }

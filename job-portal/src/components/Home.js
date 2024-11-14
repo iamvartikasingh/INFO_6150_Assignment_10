@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Container, Box } from '@mui/material';
 
 function Home() {
-  const username = localStorage.getItem('username'); // Retrieve the username from localStorage
+  const username = localStorage.getItem('username'); 
 
   return (
     <Box
@@ -17,13 +17,13 @@ function Home() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: 3,
-        color: '#fff', // Text color to contrast with the background
+        color: '#fff', 
       }}
     >
       <Container
         maxWidth="sm"
         sx={{
-          backgroundColor: 'rgba(0, 0, 0, 0.2)', // Semi-transparent background for text readability
+          backgroundColor: 'rgba(0, 0, 0, 0.2)', 
           padding: 4,
           borderRadius: 2,
         }}

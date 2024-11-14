@@ -9,9 +9,9 @@ function Footer() {
         width: '100%',
         textAlign: 'center',
         padding: 2,
-        backgroundColor: 'rgba(0, 0, 0, 0.8)', // Dark background
+        backgroundColor: 'rgba(0, 0, 0, 0.8)', 
         color: 'white',
-        marginTop: 'auto', // Ensure footer sticks to the bottom
+        marginTop: 'auto', 
       }}
     >
       <Typography variant="body2">

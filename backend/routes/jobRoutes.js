@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Job = require('../models/Job');
 
-// Create a new job
+
 router.post('/', async (req, res) => {
   try {
     const newJob = new Job(req.body);
@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get all jobs
+
 router.get('/', async (req, res) => {
   try {
     const jobs = await Job.find();
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get a specific job by ID
+
 router.get('/:id', async (req, res) => {
   try {
     const job = await Job.findById(req.params.id);
@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update a job by ID
+
 router.put('/:id', async (req, res) => {
   try {
     const job = await Job.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -50,7 +50,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a job by ID
+
 router.delete('/:id', async (req, res) => {
   try {
     const job = await Job.findByIdAndDelete(req.params.id);

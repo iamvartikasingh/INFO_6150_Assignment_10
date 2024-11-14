@@ -6,7 +6,7 @@ const authenticateToken = (req, res, next) => {
 
   jwt.verify(token, 'secret', (err, user) => {
     if (err) return res.status(401).json({ message: 'Invalid token' });
-    req.user = user; // Attach user to request object
+    req.user = user; 
     next();
   });
 };

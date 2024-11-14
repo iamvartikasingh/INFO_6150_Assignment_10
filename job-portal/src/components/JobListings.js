@@ -48,7 +48,7 @@ function JobListings() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (!token) {
-      navigate('/'); // Redirect to login if no token is found
+      navigate('/'); 
     } else {
       fetchJobs();
     }
