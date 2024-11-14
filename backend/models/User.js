@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
   role: { type: String }
 });
 
-// Define the static method to find a user by username
 userSchema.statics.findUserByUsername = function(username) {
   return this.findOne({ username });
 };

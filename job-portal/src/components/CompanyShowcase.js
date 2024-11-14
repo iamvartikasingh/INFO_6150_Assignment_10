@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Typography, Card, CardContent, Grid } from '@mui/material';
 
 function CompanyShowcase() {
-  // Sample company data
+
   const companies = [
     { id: 1, name: 'Tech Corp', description: 'Leading in tech solutions' },
     { id: 2, name: 'Innovate Ltd', description: 'Innovative software solutions' },

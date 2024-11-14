@@ -17,6 +17,10 @@ const JobSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  applyLink: {
+    type: String,
+    required: true,
+  }
 });
 
 

@@ -1,12 +1,11 @@
 // backend/routes/jobRoutes.js
 const express = require('express');
 const router = express.Router();
-const Job = require('../models/Job'); // Import the Job model
+const Job = require('../models/Job');
 
 // Create a new job
 router.post('/', async (req, res) => {
   try {
-    console.log('Received body:', req.body); // Log the request body
     const newJob = new Job(req.body);
     const job = await newJob.save();
     res.status(201).json(job);
