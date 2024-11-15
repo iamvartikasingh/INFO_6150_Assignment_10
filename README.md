@@ -51,33 +51,35 @@ Node.js and npm/yarn installed
 
 1. Navigate to the backend directory:
 
-```cd backend```
+```bash
+cd backend
+```
 
 2. Install dependencies:
-
-```npm install```
-
+```bash
+npm install
+```
 3. Start the backend server:
-
-```node server.js```
+```bash
+node server.js```
 
 
 
 ### Frontend Setup
+1. Navigate to the root directory of the project:
+```bash
+cd project-root
+```
+2. Install dependencies:
+```bash
+```npm install
+```
 
-	1.	Navigate to the root directory of the project:
+3. Start the React development server:
 
-```cd project-root```
-
-
-	2.	Install dependencies:
-
-```npm install```
-
-
-	3.	Start the React development server:
-
-```npm start```
+```bash
+npm start
+```
 
 Usage
 
@@ -129,7 +131,7 @@ const jobPosts = [
   },
   // More job posts...
 ];
-
-Contact
+```
+## Contact
 
 For any queries or issues, please reach out to: contact@jobhunt.com
