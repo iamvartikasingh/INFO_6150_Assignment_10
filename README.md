@@ -1,5 +1,5 @@
 
-#Job Portal Project
+# Job Portal Project
 
 Overview
 
@@ -80,7 +80,7 @@ Frontend Setup
 
 	3.	Start the React development server:
 
-```npm start```
+```npm start
 
 
 
@@ -116,7 +116,8 @@ Sample Data
 
 Job Posts
 
-```const jobPosts = [
+```javascript
+const jobPosts = [
   {
     id: 1,
     title: 'Full Stack Developer',
@@ -132,7 +133,7 @@ Job Posts
     applyLink: 'https://example.com/apply/digital-marketing-specialist',
   },
   // More job posts...
-];```
+];
 
 Contact
 
