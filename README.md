@@ -80,9 +80,7 @@ Frontend Setup
 
 	3.	Start the React development server:
 
-```npm start
-
-
+```npm start```
 
 Usage
 
@@ -114,7 +112,7 @@ Company Showcase
 
 Sample Data
 
-Job Posts
+## Job Posts
 
 ```javascript
 const jobPosts = [
