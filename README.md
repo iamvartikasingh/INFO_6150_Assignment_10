@@ -1,4 +1,3 @@
-Here’s your README.md file properly formatted for Markdown:
 
 Job Portal Project
 
@@ -53,12 +52,12 @@ Backend Setup
 
 	1.	Navigate to the backend directory:
 
-cd backend
+```cd backend```
 
 
 	2.	Install dependencies:
 
-npm install
+```npm install```
 
 
 	3.	Start the backend server:
