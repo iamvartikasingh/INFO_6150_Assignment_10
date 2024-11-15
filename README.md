@@ -1,5 +1,5 @@
 
-Job Portal Project
+#Job Portal Project
 
 Overview
 
@@ -62,7 +62,7 @@ Backend Setup
 
 	3.	Start the backend server:
 
-node server.js
+```node server.js```
 
 
 
@@ -70,17 +70,17 @@ Frontend Setup
 
 	1.	Navigate to the root directory of the project:
 
-cd project-root
+```cd project-root```
 
 
 	2.	Install dependencies:
 
-npm install
+```npm install```
 
 
 	3.	Start the React development server:
 
-npm start
+```npm start```
 
 
 
@@ -116,7 +116,7 @@ Sample Data
 
 Job Posts
 
-const jobPosts = [
+```const jobPosts = [
   {
     id: 1,
     title: 'Full Stack Developer',
@@ -132,7 +132,7 @@ const jobPosts = [
     applyLink: 'https://example.com/apply/digital-marketing-specialist',
   },
   // More job posts...
-];
+];```
 
 Contact
 
