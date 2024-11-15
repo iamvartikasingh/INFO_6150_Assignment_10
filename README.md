@@ -6,16 +6,16 @@
 The Job Portal project is a comprehensive application built using React, Material UI, Axios, and Node.js (backend). The application offers job seekers a user-friendly interface to explore job listings and view company profiles, with integrated login and session management.
 
 ## Features
-	•	Login and Session Management: Secure login using stored usernames and passwords with session management.
-	•	Job Portal Pages and Routing:
-	•	Home
-	•	About
-	•	Job Listings
-	•	Contact
-	•	Company Showcase
-	•	Job Listings with Frontend Data: Displays job data dynamically using Material UI components and Axios for API integration.
-	•	Company Showcase with Image Gallery: Displays a gallery of company images sourced from a backend server.
-	•	Material UI Components: Utilizes various Material UI components for a consistent and polished user interface.
+	1. Login and Session Management: Secure login using stored usernames and passwords with session management.
+	2. Job Portal Pages and Routing:
+	  1. Home
+	  2. About
+	  3. Job Listings
+	  4. Contact
+	  5. Company Showcase
+	  6. Job Listings with Frontend Data: Displays job data dynamically using Material UI components and Axios for API integration.
+	  7. Company Showcase with Image Gallery: Displays a gallery of company images sourced from a backend server.
+	  8. Material UI Components: Utilizes various Material UI components for a consistent and polished user interface.
 
 
 ## Project Structure
@@ -61,7 +61,8 @@ npm install
 ```
 3. Start the backend server:
 ```bash
-node server.js```
+node server.js
+```
 
 
 
