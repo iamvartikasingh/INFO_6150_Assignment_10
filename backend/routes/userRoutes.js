@@ -7,7 +7,7 @@ const User = require('../models/User');
 
 
 
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
   const { username, password, email, type } = req.body;
 
  

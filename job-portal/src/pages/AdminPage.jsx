@@ -1,81 +1,55 @@
+// src/pages/AdminPage.jsx
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchUsers } from '../redux/slices/usersSlice';
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableRow, 
-  CircularProgress, 
-  Box, 
-  Typography, 
-  Paper, 
-  AppBar, 
-  Toolbar, 
-  Button 
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  CircularProgress,
+  Typography,
+  Box,
+  Container,
+  Paper,
 } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import AdminNavBar from '../components/AdminNavBar';
+import Footer from '../components/Footer';
 
 const AdminPage = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { list: users, loading, error } = useSelector((state) => state.users);
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/');
-  };
-
   return (
-    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Admin Navigation Bar */}
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Admin Panel
+    <>
+      <AdminNavBar />
+      <Container sx={{ minHeight: '85vh', mt: 4 }}>
+        <Paper elevation={3} sx={{ padding: 3 }}>
+          <Typography variant="h4" component="h1" align="center" gutterBottom>
+            Employee List
           </Typography>
-          <Button color="inherit" onClick={() => navigate('/admin')}>
-            Home
-          </Button>
-          <Button color="inherit" onClick={() => navigate('/add-jobs')}>
-            Add Jobs
-          </Button>
-          <Button color="inherit" onClick={handleLogout}>
-            Logout
-          </Button>
-        </Toolbar>
-      </AppBar>
-
-      {/* Content Section */}
-      <Box sx={{ flexGrow: 1, p: 3 }}>
-        <Typography variant="h4" gutterBottom>
-          Employee List
-        </Typography>
-
-        {loading && (
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2 }}>
-            <CircularProgress />
-          </Box>
-        )}
-        {error && (
-          <Typography color="error" variant="body1" align="center" sx={{ mt: 2 }}>
-            {error}
-          </Typography>
-        )}
-
-        {!loading && !error && (
-          <Paper elevation={3} sx={{ mt: 3 }}>
+          {loading && (
+            <Box display="flex" justifyContent="center" alignItems="center">
+              <CircularProgress />
+            </Box>
+          )}
+          {error && (
+            <Typography color="error" align="center">
+              {error}
+            </Typography>
+          )}
+          {!loading && !error && users.length > 0 && (
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell><Typography variant="h6">Name</Typography></TableCell>
-                  <TableCell><Typography variant="h6">Email</Typography></TableCell>
-                  <TableCell><Typography variant="h6">Type</Typography></TableCell>
+                  <TableCell>Name</TableCell>
+                  <TableCell>Email</TableCell>
+                  <TableCell>Type</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -88,10 +62,14 @@ const AdminPage = () => {
                 ))}
               </TableBody>
             </Table>
-          </Paper>
-        )}
-      </Box>
-    </Box>
+          )}
+          {!loading && !error && users.length === 0 && (
+            <Typography align="center">No employees found.</Typography>
+          )}
+        </Paper>
+      </Container>
+      <Footer />
+    </>
   );
 };
 

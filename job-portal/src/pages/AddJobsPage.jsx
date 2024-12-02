@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import {
-  TextField,
-  Button,
-  Container,
-  Typography,
-  Paper,
-  Box,
-} from '@mui/material';
+import { TextField, Button, Container, Typography, Paper, Box } from '@mui/material';
 import axios from 'axios';
+import AdminNavBar from '../components/AdminNavBar';
+import Footer from '../components/Footer';
 
 const AddJobPage = () => {
   const [formData, setFormData] = useState({
@@ -44,61 +39,79 @@ const AddJobPage = () => {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 5 }}>
-      <Paper elevation={3} sx={{ p: 3 }}>
-        <Typography variant="h4" component="h1" align="center" gutterBottom>
-          Add Job
-        </Typography>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="Company Name"
-            name="company"
-            value={formData.company}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <TextField
-            label="Job Title"
-            name="title"
-            value={formData.title}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            required
-          />
-          <TextField
-            label="Job Description"
-            name="description"
-            value={formData.description}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            multiline
-            rows={4}
-            required
-          />
-          <TextField
-            label="Salary"
-            name="salary"
-            value={formData.salary}
-            onChange={handleInputChange}
-            fullWidth
-            margin="normal"
-            type="number"
-            required
-          />
-          {success && <Typography color="success.main">{success}</Typography>}
-          {error && <Typography color="error.main">{error}</Typography>}
-          <Box mt={2}>
-            <Button type="submit" variant="contained" color="primary" fullWidth>
-              Add Job
-            </Button>
-          </Box>
-        </form>
-      </Paper>
-    </Container>
+    <Box
+      sx={{
+        minHeight: '100vh', // Ensures the container spans the full viewport height
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <AdminNavBar />
+      <Container
+        maxWidth="sm"
+        sx={{
+          flex: 1, // Makes this container take up available space
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Paper elevation={3} sx={{ p: 3, width: '100%' }}>
+          <Typography variant="h4" component="h1" align="center" gutterBottom>
+            Add Job
+          </Typography>
+          <form onSubmit={handleSubmit}>
+            <TextField
+              label="Company Name"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              fullWidth
+              margin="normal"
+              required
+            />
+            <TextField
+              label="Job Title"
+              name="title"
+              value={formData.title}
+              onChange={handleInputChange}
+              fullWidth
+              margin="normal"
+              required
+            />
+            <TextField
+              label="Job Description"
+              name="description"
+              value={formData.description}
+              onChange={handleInputChange}
+              fullWidth
+              margin="normal"
+              multiline
+              rows={4}
+              required
+            />
+            <TextField
+              label="Salary"
+              name="salary"
+              value={formData.salary}
+              onChange={handleInputChange}
+              fullWidth
+              margin="normal"
+              type="number"
+              required
+            />
+            {success && <Typography color="success.main">{success}</Typography>}
+            {error && <Typography color="error.main">{error}</Typography>}
+            <Box mt={2}>
+              <Button type="submit" variant="contained" color="primary" fullWidth>
+                Add Job
+              </Button>
+            </Box>
+          </form>
+        </Paper>
+      </Container>
+      <Footer />
+    </Box>
   );
 };
 

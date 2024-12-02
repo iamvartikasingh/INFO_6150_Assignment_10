@@ -7,15 +7,18 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Home from './components/Home'; // Employee page
 import JobListings from './components/JobListings';
 import Contact from './components/Contact';
-import CompanyShowcase from './components/CompanyShowcase'; // Adjust the path as necessary
+import CompanyShowcase from './components/CompanyShowcase';
+import About from './components/About';
+import CreateUser from './pages/CreateUser';
+
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Login Route */}
+      
         <Route path="/" element={<Login />} />
 
-        {/* Admin Route */}
+      
         <Route
           path="/admin"
           element={
@@ -25,7 +28,7 @@ function App() {
           }
         />
 
-        {/* Add Jobs Route */}
+      
         <Route
           path="/add-jobs"
           element={
@@ -35,7 +38,7 @@ function App() {
           }
         />
 
-        {/* Employee Route */}
+      
         <Route
           path="/home"
           element={
@@ -44,11 +47,20 @@ function App() {
             </ProtectedRoute>
           }
         />
+       <Route
+  path="/create-user"
+  element={
+    <ProtectedRoute requiredRole="admin">
+      <CreateUser />
+    </ProtectedRoute>
+  }
+/>
       </Routes>
 
       <Routes>
-        {/* Main Dashboard (Home) */}
-        <Route path="/" element={<Home />} />
+        
+     
+      <Route path="/about" element={<About />} />
 
         <Route
   path="/job-listings"
@@ -58,7 +70,7 @@ function App() {
     </ProtectedRoute>
   }
 />
-        {/* Contact Page */}
+     
         <Route path="/contact" element={<Contact />} />
         <Route path="/company-showcase" element={<CompanyShowcase />} />
 

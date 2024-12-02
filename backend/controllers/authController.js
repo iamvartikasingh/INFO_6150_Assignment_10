@@ -7,12 +7,12 @@ exports.login = async (req, res) => {
   try {
     const user = await authService.authenticate(username, password);
     if (user && user.username) {
-      // Include user type in the token payload
+      
       const token = jwt.sign(
         { 
           username: user.username, 
           id: user._id, 
-          type: user.type  // Add type to the token payload
+          type: user.type  
         }, 
         'secret', 
         { expiresIn: '1h' }

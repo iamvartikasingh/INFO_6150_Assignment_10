@@ -63,7 +63,7 @@ function Login() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url("https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15877.jpg?t=st=1731566395~exp=1731569995~hmac=a32d895270a9f29ca40bfccf9992bc3f44bfb6f3ec3de0ec83b212833b5878a6&w=2000")',
+          backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1681487178876-a1156952ec60?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.7, 
