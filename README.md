@@ -7,37 +7,38 @@ The Job Portal project is a comprehensive application built using React, Materia
 
 ## Features
 
-  1.Login and Session Management:
-	Secure login with session handling.
-	Role-based redirection (Admin and Employee).
+1. Login and Session Management:
+Secure login with session handling.
+Role-based redirection (Admin and Employee).
 
+2. Job Listings with Pagination
+Dynamic job data retrieved from the backend using Axios.
+Pagination for browsing large job datasets.
 
-  2.Job Listings with Pagination:
-	Dynamic job data retrieved from the backend using Axios.
-	Pagination for browsing large job datasets.
+3. Company Showcase:
+Displays a gallery of companies with images and descriptions.
 
-	3.Company Showcase:
-	Displays a gallery of companies with images and descriptions.
+4. Material UI Components:
+A polished and consistent user interface with modern components.
 
-	4.Material UI Components:
-	A polished and consistent user interface with modern components.
+5. Contact Page:
+Allows users to reach out with queries or feedback.
 
-	5.Contact Page:
-	Allows users to reach out with queries or feedback.
-
-	6.Responsive Design:
-	Fully responsive and optimized for various devices.
+6. Responsive Design:
+Fully responsive and optimized for various devices.
 
 ## Admin Features: ##
+1.	Admin Dashboard:
+Manage job postings and users through a dedicated admin interface.
 
-	1.	Admin Dashboard:
-	Manage job postings and users through a dedicated admin interface.
-	2.	Add Jobs:
-	Allows admins to create new job postings with fields like company name, job title, description, and salary.
-	3.	Create Users:
-	Admins can create new users (Admin or Employee roles).
-	4.	Role-based Access Control:
-	Protected routes to restrict access based on user roles.
+2.	Add Jobs:
+Allows admins to create new job postings with fields like company name, job title, description, and salary.
+
+3.	Create Users:
+Admins can create new users (Admin or Employee roles).
+
+4.	Role-based Access Control:
+Protected routes to restrict access based on user roles.
 
 
 ## Project Structure
@@ -139,6 +140,27 @@ Job Listings
 Company Showcase
 
 	•	GET /api/companies: Retrieves a list of companies and images.
+Redux Integration
+
+Overview
+
+This project uses Redux for state management, enabling seamless communication between components and maintaining a centralized state for the application. Redux improves scalability and simplifies state sharing across the admin and employee portals.
+
+Key Redux Features
+
+	1.	Global State Management:
+	•	Redux handles the application’s global state, including job listings, authentication, and user details.
+	2.	Slices and Reducers:
+	•	Modular state slices for better separation of concerns:
+	•	jobsSlice: Manages job-related actions (fetching, adding jobs, etc.).
+	•	usersSlice: Manages user-related actions (authentication, user roles, etc.).
+	3.	Thunks for Asynchronous Actions:
+	•	Redux Thunk middleware enables API calls to interact with the backend seamlessly.
+	•	Examples:
+	•	Fetching jobs (fetchJobs).
+	•	Adding jobs (addJob).
+	4.	Role-Based Data Handling:
+	•	Jobs added by the admin are immediately updated in the Redux store and displayed in the employee portal.
 
 Sample Data
 
