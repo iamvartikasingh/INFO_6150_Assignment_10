@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, TextField, Container, Typography, Box, Paper, Avatar } from '@mui/material';
 import { LockOutlined } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import axios from 'axios';
 
 function Login() {
@@ -14,19 +13,36 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/login', {
+      console.log("Sending login request...");
+      const response = await axios.post("http://localhost:3001/api/login", {
         username,
         password,
       });
+      console.log("Response received:", response.data);
+  
       if (response.data.token && response.data.user) {
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('username', response.data.user.username);
-        navigate('/home'); 
+        console.log("Login successful. User data:", response.data.user);
+  
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("username", response.data.user.username);
+        localStorage.setItem("type", response.data.user.type);
+        // Redirect based on user type
+        if (response.data.user.type === "admin") {
+          console.log("Redirecting to:", response.data.user.type === "admin" ? "/admin" : "/employee");
+
+          navigate("/admin");
+        } else if (response.data.user.type === "employee") {
+          console.log("Redirecting to:", response.data.user.type === "admin" ? "/admin" : "/employee");
+
+          navigate("/employee");
+        }
       }
     } catch (err) {
-      setError('Invalid username or password');
+      console.error("Error during login:", err);
+      setError("Invalid username or password");
     }
   };
+
   return (
     <Box
       sx={{
@@ -40,7 +56,6 @@ function Login() {
         overflow: 'hidden',
       }}
     >
-      
       <Box
         sx={{
           position: 'absolute',
@@ -55,14 +70,12 @@ function Login() {
           zIndex: 0,
         }}
       />
-     
       <Container maxWidth="xs" sx={{ position: 'relative', zIndex: 1 }}>
         <Paper elevation={3} sx={{ padding: 3 }}>
           <Box display="flex" justifyContent="center" mb={2}>
-            <Avatar sx={{ backgroundColor: 'rgba(0, 0, 0, 0.8)'  }}>
+            <Avatar sx={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }}>
               <LockOutlined />
             </Avatar>
-
           </Box>
           <Typography variant="h5" component="h1" align="center" gutterBottom>
             Login
@@ -97,18 +110,15 @@ function Login() {
               variant="contained"
               color="primary"
               fullWidth
-              sx={{ mt: 2 , backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
+              sx={{ mt: 2, backgroundColor: 'rgba(0, 0, 0, 0.8)' }}
             >
               Login
             </Button>
           </form>
         </Paper>
       </Container>
-     
     </Box>
   );
 }
-
-
 
 export default Login;

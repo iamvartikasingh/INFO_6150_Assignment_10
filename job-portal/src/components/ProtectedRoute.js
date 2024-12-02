@@ -1,18 +1,18 @@
-// src/components/ProtectedRoute.js
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Navigate } from 'react-router-dom';
 
-function ProtectedRoute({ children }) {
-  const navigate = useNavigate();
+const ProtectedRoute = ({ children, requiredRole }) => {
+  const userType = localStorage.getItem('type'); // Get user type from localStorage
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      navigate('/'); 
-    }
-  }, [navigate]);
+  if (!userType) {
+    return <Navigate to="/" />; // Redirect to login if no user type
+  }
+
+  if (requiredRole && userType !== requiredRole) {
+    return <Navigate to="/" />; // Redirect unauthorized users to login
+  }
 
   return children;
-}
+};
 
 export default ProtectedRoute;
