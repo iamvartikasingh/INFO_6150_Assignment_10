@@ -34,7 +34,7 @@ function Login() {
         } else if (response.data.user.type === "employee") {
           console.log("Redirecting to:", response.data.user.type === "admin" ? "/admin" : "/employee");
 
-          navigate("/employee");
+          navigate("/home");
         }
       }
     } catch (err) {

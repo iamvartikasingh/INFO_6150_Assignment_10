@@ -5,7 +5,9 @@ import AdminPage from './pages/AdminPage';
 import AddJobsPage from './pages/AddJobsPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './components/Home'; // Employee page
-
+import JobListings from './components/JobListings';
+import Contact from './components/Contact';
+import CompanyShowcase from './components/CompanyShowcase'; // Adjust the path as necessary
 function App() {
   return (
     <Router>
@@ -42,6 +44,24 @@ function App() {
             </ProtectedRoute>
           }
         />
+      </Routes>
+
+      <Routes>
+        {/* Main Dashboard (Home) */}
+        <Route path="/" element={<Home />} />
+
+        <Route
+  path="/job-listings"
+  element={
+    <ProtectedRoute requiredRole="employee">
+      <JobListings />
+    </ProtectedRoute>
+  }
+/>
+        {/* Contact Page */}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/company-showcase" element={<CompanyShowcase />} />
+
       </Routes>
     </Router>
   );
