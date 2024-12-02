@@ -6,16 +6,32 @@
 The Job Portal project is a comprehensive application built using React, Material UI, Axios, and Node.js (backend). The application offers job seekers a user-friendly interface to explore job listings and view company profiles, with integrated login and session management.
 
 ## Features
-	1. Login and Session Management: Secure login using stored usernames and passwords with session management.
-	2. Job Portal Pages and Routing:
-	  1. Home
-	  2. About
-	  3. Job Listings
-	  4. Contact
-	  5. Company Showcase
-	  6. Job Listings with Frontend Data: Displays job data dynamically using Material UI components and Axios for API integration.
-	  7. Company Showcase with Image Gallery: Displays a gallery of company images sourced from a backend server.
-	  8. Material UI Components: Utilizes various Material UI components for a consistent and polished user interface.
+
+1.	Login and Session Management:
+	•	Secure login with session handling.
+	•	Role-based redirection (Admin and Employee).
+	2.	Job Listings with Pagination:
+	•	Dynamic job data retrieved from the backend using Axios.
+	•	Pagination for browsing large job datasets.
+	3.	Company Showcase:
+	•	Displays a gallery of companies with images and descriptions.
+	4.	Material UI Components:
+	•	A polished and consistent user interface with modern components.
+	5.	Contact Page:
+	•	Allows users to reach out with queries or feedback.
+	6.	Responsive Design:
+	•	Fully responsive and optimized for various devices.
+
+## Admin Features:
+
+	1.	Admin Dashboard:
+	•	Manage job postings and users through a dedicated admin interface.
+	2.	Add Jobs:
+	•	Allows admins to create new job postings with fields like company name, job title, description, and salary.
+	3.	Create Users:
+	•	Admins can create new users (Admin or Employee roles).
+	4.	Role-based Access Control:
+	•	Protected routes to restrict access based on user roles.
 
 
 ## Project Structure
@@ -23,10 +39,14 @@ The Job Portal project is a comprehensive application built using React, Materia
 The project follows a clean and modular folder structure:
 ```bash
 project-root/
-  ├── backend/  // Contains Node.js backend (controller, model, router)
-  ├── src/
-      ├── components/  // React components
+  ├── backend/          # Node.js backend code
+  │   ├── models/       # Mongoose models
+  │   ├── routes/       # Express routes
+  │   ├── server.js     # Main server file
+  ├── src/              # React frontend code
+      ├── components/   # Reusable React components
       │   ├── About.js
+      │   ├── AdminNavBar.js
       │   ├── Contact.js
       │   ├── CompanyShowcase.js
       │   ├── Footer.js
@@ -34,10 +54,14 @@ project-root/
       │   ├── JobListings.js
       │   ├── Login.js
       │   ├── NavBar.js
-      │   └── ProtectedRoute.js
-      ├── theme.js  // Material UI theme
-      ├── App.js  // Main application component
-      ├── index.js  // Entry point
+      │   ├── ProtectedRoute.js
+      ├── pages/        # Main pages
+      │   ├── AdminPage.jsx
+      │   ├── AddJobPage.jsx
+      │   ├── CreateUserPage.jsx
+      ├── App.js        # Main application component
+      ├── theme.js      # Material UI theme configuration
+      ├── index.js      # Application entry point
   ├── .gitignore
   ├── README.md
   └── package.json
