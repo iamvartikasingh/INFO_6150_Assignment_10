@@ -41,7 +41,7 @@ const AddJobPage = () => {
   return (
     <Box
       sx={{
-        minHeight: '100vh', // Ensures the container spans the full viewport height
+        minHeight: '100vh', 
         display: 'flex',
         flexDirection: 'column',
       }}
@@ -50,7 +50,7 @@ const AddJobPage = () => {
       <Container
         maxWidth="sm"
         sx={{
-          flex: 1, // Makes this container take up available space
+          flex: 1, 
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

@@ -4,7 +4,7 @@ import Login from './components/Login';
 import AdminPage from './pages/AdminPage';
 import AddJobsPage from './pages/AddJobsPage';
 import ProtectedRoute from './components/ProtectedRoute';
-import Home from './components/Home'; // Employee page
+import Home from './components/Home'; 
 import JobListings from './components/JobListings';
 import Contact from './components/Contact';
 import CompanyShowcase from './components/CompanyShowcase';

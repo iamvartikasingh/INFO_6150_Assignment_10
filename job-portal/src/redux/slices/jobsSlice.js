@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Fetch jobs from the backend
+
 export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async () => {
   const response = await axios.get('/get/jobs'); // Adjust API URL as needed
   return response.data;

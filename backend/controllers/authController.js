@@ -24,7 +24,7 @@ exports.login = async (req, res) => {
         user: { 
           username: user.username, 
           id: user._id, 
-          type: user.type  // Return type in response
+          type: user.type  
         } 
       });
     } else {

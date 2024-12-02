@@ -2,14 +2,14 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ children, requiredRole }) => {
-  const userType = localStorage.getItem('type'); // Get user type from localStorage
+  const userType = localStorage.getItem('type'); 
 
   if (!userType) {
-    return <Navigate to="/" />; // Redirect to login if no user type
+    return <Navigate to="/" />; 
   }
 
   if (requiredRole && userType !== requiredRole) {
-    return <Navigate to="/" />; // Redirect unauthorized users to login
+    return <Navigate to="/" />; 
   }
 
   return children;

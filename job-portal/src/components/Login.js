@@ -26,7 +26,7 @@ function Login() {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.user.username);
         localStorage.setItem("type", response.data.user.type);
-        // Redirect based on user type
+        
         if (response.data.user.type === "admin") {
           console.log("Redirecting to:", response.data.user.type === "admin" ? "/admin" : "/employee");
 

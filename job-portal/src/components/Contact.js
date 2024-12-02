@@ -5,17 +5,14 @@ import Footer from './Footer';
 
 function Contact() {
   return (
-    <>
-      {/* NavBar should go at the top */}
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <NavBar /> 
-
-      {/* Main Content */}
       <Container
         sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          minHeight: '80vh',
+          flex: 1,
           padding: 1,
         }}
       >
@@ -25,7 +22,7 @@ function Contact() {
             padding: 4,
             width: '100%',
             maxWidth: 600,
-            borderRadius: 3, // rounded corners
+            borderRadius: 3,
           }}
         >
           <Typography variant="h4" component="h1" gutterBottom sx={{ textAlign: 'center', fontWeight: 'bold' }}>
@@ -45,7 +42,7 @@ function Contact() {
               variant="outlined"
               required
               fullWidth
-              sx={{ background: '#fff', borderRadius: 1 }} // white background for better readability
+              sx={{ background: '#fff', borderRadius: 1 }}
             />
             <TextField
               label="Email"
@@ -71,9 +68,9 @@ function Contact() {
               sx={{
                 padding: 1.5,
                 fontSize: '1rem',
-                background: 'linear-gradient(90deg, #000000 0%, #808080 100%)', // Black to Grey gradient
+                background: 'linear-gradient(90deg, #000000 0%, #808080 100%)',
                 '&:hover': {
-                  background: 'linear-gradient(90deg, #333333 0%, #666666 100%)', // Slightly lighter black to darker grey gradient for hover
+                  background: 'linear-gradient(90deg, #333333 0%, #666666 100%)',
                 },
               }}
             >
@@ -82,10 +79,8 @@ function Contact() {
           </Box>
         </Paper>
       </Container>
-
-      {/* Footer should go at the bottom */}
       <Footer /> 
-    </>
+    </Box>
   );
 }
 
