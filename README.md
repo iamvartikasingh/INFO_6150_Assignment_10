@@ -7,31 +7,36 @@ The Job Portal project is a comprehensive application built using React, Materia
 
 ## Features
 
-1.	Login and Session Management:
-	•	Secure login with session handling.
-	•	Role-based redirection (Admin and Employee).
-	2.	Job Listings with Pagination:
-	•	Dynamic job data retrieved from the backend using Axios.
-	•	Pagination for browsing large job datasets.
-	3.	Company Showcase:
-	•	Displays a gallery of companies with images and descriptions.
-	4.	Material UI Components:
-	•	A polished and consistent user interface with modern components.
-	5.	Contact Page:
-	•	Allows users to reach out with queries or feedback.
-	6.	Responsive Design:
-	•	Fully responsive and optimized for various devices.
+  1.Login and Session Management:
+	Secure login with session handling.
+	Role-based redirection (Admin and Employee).
+
+	2.Job Listings with Pagination:
+	Dynamic job data retrieved from the backend using Axios.
+	Pagination for browsing large job datasets.
+
+	3.Company Showcase:
+	Displays a gallery of companies with images and descriptions.
+
+	4.Material UI Components:
+	A polished and consistent user interface with modern components.
+
+	5.Contact Page:
+	Allows users to reach out with queries or feedback.
+
+	6.Responsive Design:
+	Fully responsive and optimized for various devices.
 
 ## Admin Features:
 
 	1.	Admin Dashboard:
-	•	Manage job postings and users through a dedicated admin interface.
+	Manage job postings and users through a dedicated admin interface.
 	2.	Add Jobs:
-	•	Allows admins to create new job postings with fields like company name, job title, description, and salary.
+	Allows admins to create new job postings with fields like company name, job title, description, and salary.
 	3.	Create Users:
-	•	Admins can create new users (Admin or Employee roles).
+	Admins can create new users (Admin or Employee roles).
 	4.	Role-based Access Control:
-	•	Protected routes to restrict access based on user roles.
+	Protected routes to restrict access based on user roles.
 
 
 ## Project Structure
