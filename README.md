@@ -10,8 +10,7 @@ The Job Portal project is a comprehensive application built using React, Materia
   1.Login and Session Management:
 	Secure login with session handling.
 	Role-based redirection (Admin and Employee).
-
-	2.Job Listings with Pagination:
+  2.Job Listings with Pagination:
 	Dynamic job data retrieved from the backend using Axios.
 	Pagination for browsing large job datasets.
 
